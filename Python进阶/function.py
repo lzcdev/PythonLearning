@@ -49,3 +49,90 @@ def calc_prod(lst):
 	return lazy_prod
 f = calc_prod([1, 2, 3, 4])
 print f()
+
+
+# 匿名函数
+print filter(lambda s : s and s.strip() > 0, ['test', None, '', 'str', ' ', 'end'])
+
+
+
+# 装饰器,decorate本质上是一个高阶函数，它接收一个函数作为参数，然后返回一个新函数
+def log(f):
+    def fn(*args, **kw):
+        print 'call ' + f.__name__ + '()...'
+        return f(*args, **kw)
+    return fn
+# f = factorial(f)
+@log
+def factorial(n):
+	return reduce(lambda x, y: x*y, range(1, n + 1))
+print factorial(10)
+
+
+# 计算函数调用的时间可以记录调用前后的当前时间戳，然后计算两个时间戳的差。
+import time
+
+def performance(f):
+	def fn(*args, **kw):
+		t1 = time.time()
+		r = f(*args, **kw)
+		t2 = time.time()
+		print 'call %s() in %fs' % (f.__name__, (t2 - t1))
+		return r
+	return fn
+@performance
+def factorial1(n):
+	return reduce(lambda x,y : x * y, range(1, n + 1))
+print factorial1(10)	
+
+
+
+import functools
+def log(f):
+	@functools.wraps(f)
+	def wrapper(*args, **kw):
+		print 'call...'
+		return f(*args, **kw)
+	return wrapper	
+
+
+# 偏函数
+sorted_ignore_case = functools.partial(sorted, cmp=lambda s1, s2: cmp(s1.upper(), s2.upper()))
+print sorted_ignore_case(['bob', 'about', 'Zoo', 'Credit'])	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -39,8 +39,6 @@ class Person(object):
         Person.__count = Person.__count + 1
 
 print Person.how_many()
-
 p1 = Person('Bob')
-
 print Person.how_many()       
 						

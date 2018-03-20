@@ -27,7 +27,7 @@ python qsbk_spider.py
 #### 目标：
 抓取糗事百科热门段子，每按一次回车显示一个段子的发布者，年龄，点赞数，段子内容。
 
-`糗事百科地址`[https://www.qiushibaike.com/hot/page/1]()
+`糗事百科地址`[https://www.qiushibaike.com/hot/page/1](https://www.qiushibaike.com/hot/page/1)
 
 采用BeautifulSoup提取HTML中的内容，当然也可以用正则。
 

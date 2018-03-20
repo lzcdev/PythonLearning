@@ -1,4 +1,5 @@
 # PythonLearning
+**记录学习Python过程中的一些知识**
 ## Python进阶
 [https://www.imooc.com/learn/317](https://www.imooc.com/learn/317)
 - 函数式编程(function.py)

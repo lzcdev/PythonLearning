@@ -75,15 +75,16 @@ class QSBK:
 
 	# 每次回车打印输出一个段子
 	def getOneStory(self, pageStories, page):
+		
 		for story in pageStories:
-		# 等待用户输入
 			input = raw_input()
+	
 			self.loadPage()
 			if input == "Q":
 				self.enable = False
 				return
-			# print story	
 			print '姓名：%s 点赞数：%s 评论数：%s 内容：%s' % (story[0], story[1], story[2], story[3])
+
 		
 	# 开始方法
 	def start(self):
@@ -96,8 +97,9 @@ class QSBK:
 				pageStories = self.stories[0]
 				nowPage += 1
 				del self.stories[0]
-				self.getOneStory(pageStories, nowPage)
-
+				self.getOneStory(pageStories, nowPage)		
+			
 spider = QSBK()
-spider.start()								
+spider.start()
+
 

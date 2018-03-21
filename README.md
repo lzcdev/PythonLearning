@@ -23,7 +23,7 @@
 cd Python爬虫学习系列课程
 python qsbk_spider.py
 ```
-[完整代码](https://github.com/lzcdev/PythonLearning/blob/master/Python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B/qsbk_spider.py)
+[完整代码](./Python爬虫学习系列课程/qsbk_spider.py)
 #### 目标：
 抓取糗事百科热门段子，每按一次回车显示一个段子的发布者，年龄，点赞数，段子内容。
 

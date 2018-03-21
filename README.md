@@ -31,6 +31,21 @@ python qsbk_spider.py
 
 采用BeautifulSoup提取HTML中的内容，当然也可以用正则。
 
+## 爬取百度贴吧帖子
+使用方式
+本代码在`Python爬虫学习系列课程`文件夹里，即`bdtb_spider.py`
+```
+cd Python爬虫学习系列课程
+python bdtb_spider.py
+```
+[完整代码](./Python爬虫学习系列课程/qsbk_spider.py)
+#### 目标：
+替换URL可抓取百度贴吧任意帖子，将抓取的内容进行保存。
+
+`要抓取的贴吧demo地址`[https://tieba.baidu.com/p/3138733512?see_lz=1&pn=1](https://tieba.baidu.com/p/3138733512?see_lz=1&pn=1)
+
+继续练习BeautifulSoup提取HTML中的内容。
+
 
 
 

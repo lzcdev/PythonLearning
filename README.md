@@ -38,7 +38,7 @@ python qsbk_spider.py
 cd Python爬虫学习系列课程
 python bdtb_spider.py
 ```
-[完整代码](./Python爬虫学习系列课程/qsbk_spider.py)
+[完整代码](./Python爬虫学习系列课程/bdtb_spider.py)
 #### 目标：
 替换URL可抓取百度贴吧任意帖子，将抓取的内容进行保存。
 

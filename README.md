@@ -45,6 +45,19 @@ python bdtb_spider.py
 `要抓取的贴吧demo地址`[https://tieba.baidu.com/p/3138733512?see_lz=1&pn=1](https://tieba.baidu.com/p/3138733512?see_lz=1&pn=1)
 
 继续练习BeautifulSoup提取HTML中的内容。
+## 爬取淘宝MM信息（爬取图片失败，其他信息可以）
+使用方式
+本代码在`Python爬虫学习系列课程`文件夹里，即`tbmm_spider.py`
+```
+cd Python爬虫学习系列课程
+python tbmm_spider.py
+```
+[完整代码](./Python爬虫学习系列课程/tbmm_spider.py)
+#### 目标：
+抓取淘宝 MM 的姓名，头像，年龄，地址等信息，把每一个MM的写真图片按照文件夹保存到本地(失败),熟悉文件保存的过程
+
+`要抓取的demo地址`[https://mm.taobao.com/json/request_top_list.htm?page=1](https://mm.taobao.com/json/request_top_list.htm?page=1)
+
 
 
 

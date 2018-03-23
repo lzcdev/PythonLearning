@@ -58,6 +58,28 @@ python tbmm_spider.py
 
 `要抓取的demo地址`[https://mm.taobao.com/json/request_top_list.htm?page=1](https://mm.taobao.com/json/request_top_list.htm?page=1)
 
+## 爬虫实战-爬取极客学院所有课程的封面图片
+使用方式
+```
+python jkxy_course_img.py
+```
+[完整代码](tbmm_spider.py)
+#### 目标：
+爬取极客学院所有课程的封面图片，练习一下正则表达式的使用，练习文件夹以及文件的操作
+`要抓取的地址`[http://www.jikexueyuan.com/course/?pageNum=1](http://www.jikexueyuan.com/course/?pageNum=1)
+#### 分析
+查看源码可发现目标标签为
+```
+<img src="https://a1.jikexueyuan.com/home/201803/14/111e/5aa8b685a69eb.jpg" class="lessonimg" title="AWS云计算数据搜索与分析--- Amazon Elasticsearch" alt="AWS云计算数据搜索与分析--- Amazon Elasticsearch">
+```
+则使用正则表达式<img src="(.*?)" class="lessonimg"可匹配。
+目前总共97页数据，暂时爬取5页。若要爬取更多，修改页数即可。
+```
+spider = Spider()
+spider.start(5)
+```
+
+
 
 
 

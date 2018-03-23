@@ -63,7 +63,7 @@ python tbmm_spider.py
 ```
 python jkxy_course_img.py
 ```
-[完整代码](tbmm_spider.py)
+[完整代码](./tbmm_spider.py)
 #### 目标：
 爬取极客学院所有课程的封面图片，练习一下正则表达式的使用，练习文件夹以及文件的操作
 `要抓取的地址`[http://www.jikexueyuan.com/course/?pageNum=1](http://www.jikexueyuan.com/course/?pageNum=1)

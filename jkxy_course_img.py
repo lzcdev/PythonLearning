@@ -58,7 +58,6 @@ class Spider:
 				self.saveImg(pic,i)
 				i += 1			
 
-
 spider = Spider()
 spider.start(5)
 

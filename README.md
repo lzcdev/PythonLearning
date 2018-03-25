@@ -58,7 +58,22 @@ python tbmm_spider.py
 
 `要抓取的demo地址`[https://mm.taobao.com/json/request_top_list.htm?page=1](https://mm.taobao.com/json/request_top_list.htm?page=1)
 
-## 爬虫实战-爬取极客学院所有课程的封面图片
+## 爬取猫眼电影Top100
+使用方式
+```
+python maoyanmovie.py
+```
+[完整代码](./maoyanmovie.py)
+#### 目标：
+爬取猫眼电影Top100所有的电影，练习requests的使用，打印并保存进txt文件
+`要抓取的地址`[http://maoyan.com/board/4?offset=0](http://maoyan.com/board/4?offset=0)
+目前总共10页数据，每页10条。
+```
+spider = Spider()
+spider.start()
+```
+
+## 爬取极客学院所有课程的封面图片
 使用方式
 ```
 python jkxy_course_img.py
@@ -78,7 +93,6 @@ python jkxy_course_img.py
 spider = Spider()
 spider.start(5)
 ```
-
 
 
 

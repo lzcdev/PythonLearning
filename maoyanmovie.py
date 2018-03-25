@@ -8,6 +8,10 @@ import re
 from requests.exceptions import RequestException
 import os
 
+import sys  
+reload(sys)  
+sys.setdefaultencoding('utf8')   
+
 class Spider:
 
 	def __init__(self):
@@ -35,19 +39,7 @@ class Spider:
                       +'<a.*?>(.*?)</a>.*?star">(.*?)</p>.*?releasetime">(.*?)</p>.*?integer">'
                       +'(.*?)</i>.*?fraction">(\d+)</i>.*?</dd>',re.S)
 		items = re.findall(pattern,html)
-		for item in items:
-			list.append([item[0],item[2],item[3],item[4],item[5],item[6],item[1]])
-			print item[0],item[2],item[3].strip(),item[4].strip(),item[5],item[6],item[1]
-			# print item[2]
-			# yield {
-			# 	'index': item[0],
-			# 	'title': item[2],
-			# 	'actor': item[3].strip()[3:],
-			# 	'time': item[4].strip()[5:],
-			# 	'score': item[5]+item[6],
-			# 	'image': item[1]		
-			# }
-		return list	
+		return items	
 
 
 	# 创建目录
@@ -69,15 +61,20 @@ class Spider:
 		f.close()
 
 
-	def start(self,offset):
+	def start(self):
 		self.mkdir()
+		f = open('movie/msg.txt','w')
 		for i in range(0,10):
 			url = self.url+'?offset='+str(i*10)
-			print url
+			# print url
 			lists = self.parse_one_page(url)
-
-
-# 爬取猫眼电影Top100
+			for item in lists:
+				print item[0],item[2],item[3].strip(),item[4].strip(),item[5],item[6],item[1]
+				msg = '排名：%s, 名字:[%s], %s, 评分：%s \n' % (item[0],item[2],item[4].strip(),item[5]+item[6])
+				f.write(msg)
+		f.close()
+		
+# 爬取猫眼电影Top100,每页10条，总共10页,参数为offset
 spider = Spider()
 spider.start()
 
